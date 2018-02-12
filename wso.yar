@@ -14,7 +14,7 @@ rule wso_generic : webshell
     $secParam = "showSecParam"
 
   condition:
-    $magic_numbers at 0
+    $magic_numbers
     and ($secParam and 1 of ($safe_mode*)
     or 1 of ($exploit_db, $base64_str1))
 }
